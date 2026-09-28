@@ -19,7 +19,7 @@ class Solution:
             
             for i in range(l, r-1):
                 if (abs(nums[k] - nums[i]) in seen) or ((nums[k] + nums[i]) in seen):
-                    if abs(nums[k] - nums[i]) == nums[i] and seen[nums[i]] == 1:
+                    if abs(nums[k] - nums[i]) == nums[i] and seen[nums[i]] == 1 and nums[k] + nums[i] not in seen:
                         continue
                         
                     else:  
